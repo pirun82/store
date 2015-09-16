@@ -1,0 +1,16 @@
+<%= simple_form_for(@dep001) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :product_key %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :picurl %>
+    <%= f.input :whole_sale %>
+    <%= f.input :retail_value %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

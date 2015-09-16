@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product key:</strong>
+  <%= @dep001.product_key %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dep001.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dep001.description %>
+</p>
+
+<p>
+  <strong>Picurl:</strong>
+  <%= @dep001.picurl %>
+</p>
+
+<p>
+  <strong>Whole sale:</strong>
+  <%= @dep001.whole_sale %>
+</p>
+
+<p>
+  <strong>Retail value:</strong>
+  <%= @dep001.retail_value %>
+</p>
+
+<%= link_to 'Edit', edit_dep001_path(@dep001) %> |
+<%= link_to 'Back', dep001s_path %>

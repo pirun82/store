@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dep001s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product key</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picurl</th>
+      <th>Whole sale</th>
+      <th>Retail value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dep001s.each do |dep001| %>
+      <tr>
+        <td><%= dep001.product_key %></td>
+        <td><%= dep001.name %></td>
+        <td><%= dep001.description %></td>
+        <td><%= dep001.picurl %></td>
+        <td><%= dep001.whole_sale %></td>
+        <td><%= dep001.retail_value %></td>
+        <td><%= link_to 'Show', dep001 %></td>
+        <td><%= link_to 'Edit', edit_dep001_path(dep001) %></td>
+        <td><%= link_to 'Destroy', dep001, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dep001', new_dep001_path %>
