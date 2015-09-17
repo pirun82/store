@@ -1,37 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Kitchen</h1>
+  </div>
+</div>
+<h3>
+  <div class="row">
+    <div class="col-sm-1">
+      Product Key
+    </div>
+    <div class="col-sm-2">
+      Name
+    </div>
+    <div class="col-sm-2">
+      <div class="admin-hide">
+        Description
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="admin-hide">
+        Picture URL
+      </div>
+    </div>
+    <div class="move-left">
+    <div class="col-sm-1">
+      WS Price
+    </div>
+    </div>
+    <div class="col-sm-1">
+      LS Price
+    </div>
+  </div>
+</h3>
 
-<h1>Listing Dep001s</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Product key</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picurl</th>
-      <th>Whole sale</th>
-      <th>Retail value</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dep001s.each do |dep001| %>
-      <tr>
-        <td><%= dep001.product_key %></td>
-        <td><%= dep001.name %></td>
-        <td><%= dep001.description %></td>
-        <td><%= dep001.picurl %></td>
-        <td><%= dep001.whole_sale %></td>
-        <td><%= dep001.retail_value %></td>
-        <td><%= link_to 'Show', dep001 %></td>
-        <td><%= link_to 'Edit', edit_dep001_path(dep001) %></td>
-        <td><%= link_to 'Destroy', dep001, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Dep001', new_dep001_path %>
+<% @dep001s.each do |item| %>
+  <ul class="dep_ul">
+    <div class="row">
+      <li class="col-sm-1"><%= item.product_key %></li>
+      <li class="col-sm-2"><%= item.name %></li>
+      <div class="admin-hide"><li class="col-sm-2"><%= item.description %></li></div>
+      <div class="admin-hide"><li class="col-sm-2"><%= item.picurl %></li></div>
+      <li class="col-sm-1"><%= item.whole_sale %></li>
+      <li class="col-sm-1"><%= item.retail_value %></li>
+      <li class="col-sm-1"> </li>
+      <li class="col-sm-1"><%= link_to "Edit", edit_dep001_path(item) %></li>
+      <li class="col-sm-1"><%= link_to "Delete", item, method: :delete, data:
+        { confirm: "Are you sure you want to Delete this item?" } %></li>
+    </div>
+  </ul>
+<% end %>

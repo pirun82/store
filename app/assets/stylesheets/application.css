@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+h1
+{
+	background-color: #ccffcc;
+	color: #000033;
+	text-align: center;
+}
+h3
+{
+	background-color: #ccccff;
+	color: #000033;
+	font-size: 115%;
+}
+
+table, thead, tr, th
+{
+	margin-left: 10px;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+table, tbody, tr, td
+{
+	margin-top: 15px;
+	margin-left: 10px;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+.dep_ul
+{
+	list-style-type: none;
+}
+.dep_ul li
+{
+	display: inline;
+	margin-left: -7px;
+	padding-right: 3px;
+}
+.move-left
+{
+	text-align: left;
+}
