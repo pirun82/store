@@ -26,19 +26,6 @@ h3
 	font-size: 115%;
 }
 
-table, thead, tr, th
-{
-	margin-left: 10px;
-	padding-left: 25%;
-	padding-right: 25%;
-}
-table, tbody, tr, td
-{
-	margin-top: 15px;
-	margin-left: 10px;
-	padding-left: 25%;
-	padding-right: 25%;
-}
 .dep_ul
 {
 	list-style-type: none;
@@ -52,4 +39,12 @@ table, tbody, tr, td
 .move-left
 {
 	text-align: left;
+}
+.dep_ul:nth-child(odd)
+{
+	background-color: #EBFFEB;
+}
+.dep_ul:nth-child(even)
+{
+	background-color: #E0F9FF;
 }

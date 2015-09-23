@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>Kitchen Item's</h1>
+    <h1>Toys Item</h1>
   </div>
 </div>
 <h3>
@@ -32,7 +32,7 @@
   </div>
 </h3>
 
-<% @dep001s.each do |item| %>
+<% @dep002s.each do |item| %>
   <ul class="dep_ul">
     <div class="row">
       <li class="col-sm-1"><%= item.product_key %></li>
@@ -42,10 +42,10 @@
       <li class="col-sm-1"><%= item.whole_sale %></li>
       <li class="col-sm-1"><%= item.retail_value %></li>
       <li class="col-sm-1"> </li>
-      <li class="col-sm-1"><%= link_to "Edit", edit_dep001_path(item), class: "btn btn-primary" %></li>
+      <li class="col-sm-1"><%= link_to "Edit", edit_dep002_path(item), class: "btn btn-primary" %></li>
       <li class="col-sm-1"><%= link_to "Delete", item, class: "btn btn-danger", method: :delete, data:
         { confirm: "Are you sure you want to Delete this item?" } %></li>
     </div>
   </ul>
 <% end %>
-<%= link_to 'New Kitchen Item', new_dep001_path, class: "btn btn-warning" %>
+<%= link_to 'New Toy Item', new_dep002_path, class: "btn btn-warning" %>

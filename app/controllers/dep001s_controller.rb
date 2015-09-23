@@ -28,7 +28,7 @@ class Dep001sController < ApplicationController
 
     respond_to do |format|
       if @dep001.save
-        format.html { redirect_to @dep001, notice: 'Dep001 was successfully created.' }
+        format.html { redirect_to @dep001, notice: 'Kitchen Item was added' }
         format.json { render :show, status: :created, location: @dep001 }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Dep001sController < ApplicationController
   def update
     respond_to do |format|
       if @dep001.update(dep001_params)
-        format.html { redirect_to @dep001, notice: 'Dep001 was successfully updated.' }
+        format.html { redirect_to @dep001, notice: 'Kitchen Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @dep001 }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Dep001sController < ApplicationController
   def destroy
     @dep001.destroy
     respond_to do |format|
-      format.html { redirect_to dep001s_url, notice: 'Dep001 was successfully destroyed.' }
+      format.html { redirect_to dep001s_url, notice: 'Kitchen item was deleted.' }
       format.json { head :no_content }
     end
   end
